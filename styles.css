@@ -1,0 +1,125 @@
+@font-face {
+    font-family: lavish;
+    src: url(font/LavishlyYours-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b 38%, #128298 70%,#0f93a4 76%, #0f93a4 79%, #025d69 86%, #0c0fa4 100%);
+    background-size: 300% 300%;
+    animation: gradientShift 30s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.focal-word {
+    font-family: lavish;
+    text-align: center;
+    color: azure;
+    font-size: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    z-index: 10;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: floatInOut 30s ease-in-out infinite;
+}
+
+#circle1 {
+    width: 90px;
+    height: 90px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+#circle2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+    animation-duration: 8s;
+}
+
+#circle3 {
+    width: 200px;
+    height: 200px;
+    top: 80%;
+    left: 18%;
+    animation-delay: 4s;
+    animation-duration: 120s;
+}
+
+
+.image-circle {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: floatInOut 30s ease-in-out infinite;
+}
+
+.image-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#imgCircle1 {
+    width: 150px;
+    height: 150px;
+    top: 14%;
+    right: 10%;
+    animation-delay: 1.5s;
+    animation-duration: 40s;
+}
+
+#imgCircle2 {
+    width: 180px;
+    height: 180px;
+    top: 45%;
+    left: 5%;
+    animation-delay: 3.5s;
+    animation-duration: 60s;
+}
+
+#imgCircle3 {
+    width: 80px;
+    height: 80px;
+    top: 75%;
+    right: 40%;
+    animation-delay: 6s;
+    animation-duration: 80s;
+}
+
+@keyframes floatInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20px);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1) translateY(0);
+    }
+}
