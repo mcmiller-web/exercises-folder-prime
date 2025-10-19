@@ -54,9 +54,9 @@ body {
 }
 
 #circle2 {
-    width: 120px;
-    height: 120px;
-    top: 60%;
+    width: 100px;
+    height: 100px;
+    top: 75%;
     right: 15%;
     animation-delay: 2s;
     animation-duration: 8s;
@@ -65,7 +65,7 @@ body {
 #circle3 {
     width: 200px;
     height: 200px;
-    top: 80%;
+    top: 100%;
     left: 18%;
     animation-delay: 4s;
     animation-duration: 120s;
@@ -109,8 +109,53 @@ body {
     height: 80px;
     top: 75%;
     right: 40%;
-    animation-delay: 6s;
-    animation-duration: 80s;
+    animation-delay: 3s;
+    animation-duration: 20s;
+}
+
+.whale {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Courier New', monospace;
+    font-size: 8px;
+    line-height: 1;
+    white-space: pre;
+    animation: whaleFadeInOut 25s ease-in-out infinite;
+    z-index: 5;
+}
+
+#whale1 {
+    top: 6%;
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 70s;
+}
+
+#whale2 {
+    top: 79%;
+    right: 8%;
+    animation-delay: 5s;
+    animation-duration: 40s;
+}
+
+#whale3 {
+    top: 28%;
+    left: 4%;
+    animation-delay: 8s;
+    animation-duration: 22s;
+    transform: scale(0.8);
+    font-size: 7px;
+}
+
+@keyframes whaleFadeInOut {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8) translateY(10px);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1) translateY(0);
+    }
 }
 
 @keyframes floatInOut {
